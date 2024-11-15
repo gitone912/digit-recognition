@@ -118,14 +118,14 @@ const Draw = () => {
 
             {bigscreen &&
             <div className = "mt-3">
-                <Button variant = "outline-primary" onClick = {handleSubmitBig} size = "lg">Classify</Button>
+                <Button variant = "outline-primary" onClick = {handleSubmitBig} size = "lg">Predict</Button>
                 <Button variant = "outline-secondary" onClick = {handleResetBig} className = "ml-3" size = "lg">Reset</Button>
             </div>
             }
 
             {smallscreen &&
             <div className = "mt-3">
-                <Button variant = "outline-primary" onClick = {handleSubmitSmall} size = "lg">Classify</Button>
+                <Button variant = "outline-primary" onClick = {handleSubmitSmall} size = "lg">Predict</Button>
                 <Button variant = "outline-secondary" onClick = {handleResetSmall} className = "ml-3" size = "lg">Reset</Button>
             </div>
             }
