@@ -55,7 +55,7 @@ const Draw = () => {
         const fd = new FormData()
         fd.append('image', c)
 
-        axios.post('http://localhost:8000/api/digits/', fd, {headers:headers})
+        axios.post('https://digitrecogbackend.pythonanywhere.com/api/digits/', fd, {headers:headers})
         .then(res=>{
             getImageResult(res.data.id)
         })
@@ -69,7 +69,7 @@ const Draw = () => {
         const fd = new FormData()
         fd.append('image', c)
 
-        axios.post('http://localhost:8000/api/digits/', fd, {headers:headers})
+        axios.post('https://digitrecogbackend.pythonanywhere.com/api/digits/', fd, {headers:headers})
         .then(res=>{
             getImageResult(res.data.id)
         })
@@ -77,7 +77,7 @@ const Draw = () => {
     }
 
     const getImageResult = (id) => {
-        axios.get(`http://localhost:8000/api/digits/${id}/`)
+        axios.get(`https://digitrecogbackend.pythonanywhere.com/api/digits/${id}/`)
         .then(res=>{
             setResult(res.data.result) // here result in res.data.id is the result column of table Digit.
         })
